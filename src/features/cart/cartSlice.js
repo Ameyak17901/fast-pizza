@@ -10,7 +10,6 @@ const initialState = {
     //     totalPrice: 32,
     // },],
 }
-console.log(initialState)
 
 const cartSlice = createSlice({
     name: 'cart',

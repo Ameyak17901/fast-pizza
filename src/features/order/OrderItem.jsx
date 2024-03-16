@@ -2,7 +2,7 @@
 import { formatCurrency } from "../../utils/helpers";
 // , isLoadingIngredients, ingredients 
 
-function OrderItem({ item}) {
+function OrderItem({ item, isLoadingingredients, ingredients}) {
   const { quantity, name, totalPrice } = item;
 
   return (
@@ -13,6 +13,7 @@ function OrderItem({ item}) {
         </p>
         <p className="font-bold">{formatCurrency(totalPrice)}</p>
       </div>
+      <p className="text-sm capitalize italic text-stone-500">{isLoadingingredients ? 'Loading...' : ingredients?.join(',')}</p>
     </li>
   );
 }
